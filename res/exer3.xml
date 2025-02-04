@@ -1,0 +1,43 @@
+<data>
+    <expression>
+        <operand1>9</operand1>
+        <operator>-</operator>
+        <operator2>7</operator2>
+    </expression>
+
+    <expression>
+        <operand1>10</operand1>
+        <operator>+</operator>
+        <operator2>1</operator2>
+    </expression>
+
+    <expression>
+        <operand1>8</operand1>
+        <operator>*</operator>
+        <operator2>3</operator2>
+    </expression>
+
+    <expression>
+        <operand1>20</operand1>
+        <operator>/</operator>
+        <operator2>4</operator2>
+    </expression>
+
+    <expression>
+        <operand1>9</operand1>
+        <operator>%</operator>
+        <operator2>5</operator2>
+    </expression>
+
+    <expression>
+        <operand1>9.a</operand1>
+        <operator>/</operator>
+        <operator2>7</operator2>
+    </expression>
+
+    <expression>
+        <operand1>9</operand1>
+        <operator>-</operator>
+        <operator2>7x</operator2>
+    </expression>
+</data>
