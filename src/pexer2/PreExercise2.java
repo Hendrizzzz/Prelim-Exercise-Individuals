@@ -9,6 +9,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
+/**
+ * This needs a client.
+ */
 public class PreExercise2 {
     public static void main(String[] args) {
         try (ServerSocket server = new ServerSocket(5000))

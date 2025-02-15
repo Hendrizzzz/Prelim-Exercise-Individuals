@@ -10,18 +10,19 @@ import java.net.Socket;
 
 
 public class PreExercise1 {
+    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) {
         try
 
 
-                (
-                        ServerSocket server = new ServerSocket(4000);
-                        Socket socket = server.accept();
-
-
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                        PrintWriter writer = new PrintWriter(socket.getOutputStream());
-                )
+//                (
+//                        ServerSocket server = new ServerSocket(4000);
+//                        Socket socket = server.accept();
+//
+//
+//                        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//                        PrintWriter System.out = new PrintWriter(socket.getOutputStream());
+//                )
 
 
 
@@ -32,8 +33,8 @@ public class PreExercise1 {
 
 
             while (userWantsMore) {
-                writer.print("Host " + ++hostCount + " - Type IP address/Hostname: ");
-                writer.flush();
+                System.out.print("Host " + ++hostCount + " - Type IP address/Hostname: ");
+                System.out.flush();
 
 
                 String hostName = reader.readLine();
@@ -41,16 +42,16 @@ public class PreExercise1 {
                 int numberOfHosts = addresses.length;
 
 
-                writer.println("Number of Hosts/IPs: " + numberOfHosts);
-                writer.printf("%-15s %s%n", "Host name", "IP Address");
+                System.out.println("Number of Hosts/IPs: " + numberOfHosts);
+                System.out.printf("%-15s %s%n", "Host name", "IP Address");
 
 
                 for (InetAddress address : addresses)
-                    writer.printf("%-15s %s%n", address.getHostName(), address.getHostAddress());
+                    System.out.printf("%-15s %s%n", address.getHostName(), address.getHostAddress());
 
 
-                writer.printf("Search another [y/n]? ");
-                writer.flush();
+                System.out.printf("Search another [y/n]? ");
+                System.out.flush();
                 String choice = reader.readLine();
 
 
@@ -58,8 +59,10 @@ public class PreExercise1 {
                     userWantsMore = false;
 
 
-                writer.println();
+                System.out.println();
             }
+//            // call a mock client ..
+//            Client.start();
         }
 
 
@@ -68,3 +71,4 @@ public class PreExercise1 {
         }
     }
 }
+
